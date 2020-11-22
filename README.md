@@ -1,6 +1,10 @@
 # example-tiered-policies
 
-This repo contains an example of how you to use different local source paths within a `sentinel.hcl` file to enforce a subset of policies by environment. In the example all policies are centralized in a single directory (i.e. policies). There is a seperate directory structure per environment (i.e. staging & dev) with a child directory that contains the policy set configuration (i.e. foo, bar, baz).
+This repo contains an example of how you to use different local source paths within a `sentinel.hcl` file to enforce a subset of policies by environment. The configuration is structured as follows:
+
+* Policies are centralized in a single directory (i.e. policies). 
+* There is a directory per environment (i.e. staging & dev).
+* Each environment contains a child directory that is the working directory for each policy set configuration (i.e. foo, bar, baz).
 
 ## Demonstration Steps
 
